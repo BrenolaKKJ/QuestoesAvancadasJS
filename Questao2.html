@@ -1,0 +1,19 @@
+<input type="number" id="idade" placeholder="Digite sua idade">
+<button onclick="verificar()">Verificar</button>
+
+<p id="resposta"></p>
+
+<script>
+function verificar() {
+    let idade = document.getElementById("idade").value;
+    let resp = document.getElementById("resposta");
+
+    if (idade >= 18) {
+        resp.innerHTML = "Entrada permitida";
+        resp.style.color = "green";
+    } else {
+        resp.innerHTML = "Entrada proibida";
+        resp.style.color = "red";
+    }
+}
+</script>
