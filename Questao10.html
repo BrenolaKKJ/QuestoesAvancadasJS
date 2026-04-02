@@ -1,0 +1,44 @@
+<input id="nome" placeholder="Nome"><br>
+<input id="email" placeholder="Email"><br>
+<input id="idade" type="number" placeholder="Idade"><br>
+<input id="senha" type="password" placeholder="Senha"><br>
+<input id="confirmar" type="password" placeholder="Confirmar senha"><br>
+
+<button onclick="cadastrar()">Cadastrar</button>
+
+<script>
+function cadastrar() {
+    let nome = document.getElementById("nome").value;
+    let email = document.getElementById("email").value;
+    let idade = Number(document.getElementById("idade").value);
+    let senha = document.getElementById("senha").value;
+    let confirmar = document.getElementById("confirmar").value;
+
+    if (nome == "" || email == "" || senha == "") {
+        alert("Preencha tudo!");
+        return;
+    }
+
+    if (!email.includes("@")) {
+        alert("Email inválido");
+        return;
+    }
+
+    if (idade < 18) {
+        alert("Menor de idade");
+        return;
+    }
+
+    if (senha.length < 8) {
+        alert("Senha muito curta");
+        return;
+    }
+
+    if (senha != confirmar) {
+        alert("Senhas diferentes");
+        return;
+    }
+
+    alert("Cadastro realizado!");
+}
+</script>
