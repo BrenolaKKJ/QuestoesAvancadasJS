@@ -1,0 +1,22 @@
+<input type="number" id="palpite">
+<button onclick="tentar()">Tentar</button>
+
+<p id="res"></p>
+
+<script>
+let numero = Math.floor(Math.random() * 20) + 1;
+let tentativas = 0;
+
+function tentar() {
+    let palpite = Number(document.getElementById("palpite").value);
+    tentativas++;
+
+    if (palpite > numero) {
+        alert("Muito alto");
+    } else if (palpite < numero) {
+        alert("Muito baixo");
+    } else {
+        alert("Acertou em " + tentativas + " tentativas!");
+    }
+}
+</script>
