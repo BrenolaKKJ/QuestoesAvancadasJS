@@ -1,0 +1,17 @@
+<input type="number" id="num">
+<button onclick="gerar()">Gerar</button>
+
+<ul id="lista"></ul>
+
+<script>
+function gerar() {
+    let num = Number(document.getElementById("num").value);
+    let lista = document.getElementById("lista");
+
+    lista.innerHTML = "";
+
+    for (let i = 1; i <= 10; i++) {
+        lista.innerHTML += "<li>" + num + " x " + i + " = " + (num*i) + "</li>";
+    }
+}
+</script>
