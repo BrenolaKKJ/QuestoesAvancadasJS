@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contador</title>
+</head>
+<body>
+
+    <h2 id="texto">Total de cliques: 0</h2>
+    <button onclick="clicou()">Gostei</button>
+
+    <script>
+        let contador = 0;
+
+        function clicou() {
+            contador = contador + 1;
+            document.getElementById("texto").innerHTML = "Total de cliques: " + contador;
+        }
+    </script>
+
+</body>
+</html>
