@@ -1,0 +1,20 @@
+<button onclick="validar()">Cadastrar</button>
+
+<script>
+function validar() {
+    let nome = document.getElementById("nome").value;
+    let email = document.getElementById("email").value;
+
+    if (nome == "") {
+        document.getElementById("erroNome").innerHTML = "Nome obrigatório";
+    } else {
+        document.getElementById("erroNome").innerHTML = "";
+    }
+
+    if (!email.includes("@")) {
+        document.getElementById("erroEmail").innerHTML = "Email inválido";
+    } else {
+        document.getElementById("erroEmail").innerHTML = "";
+    }
+}
+</script>
