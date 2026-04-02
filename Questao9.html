@@ -1,0 +1,18 @@
+<button onclick="votar(1)">João</button>
+<button onclick="votar(2)">Maria</button>
+<button onclick="votar(3)">Pedro</button>
+
+<p id="res"></p>
+
+<script>
+let v1 = 0, v2 = 0, v3 = 0;
+
+function votar(n) {
+    if (n == 1) v1++;
+    if (n == 2) v2++;
+    if (n == 3) v3++;
+
+    document.getElementById("res").innerHTML =
+        "João: " + v1 + " | Maria: " + v2 + " | Pedro: " + v3;
+}
+</script>
